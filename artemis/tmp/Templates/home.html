@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Exam Website</title>
+    </head>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        body{
+            background-image: url("https://biorender.com/static/4e1c03dffeb08728e3863f3124187ef6/6d521/home-page-feature-background-pattern-top-left.png");
+            background-repeat:no-repeat;
+            background-image: url("https://i.pinimg.com/736x/41/7b/05/417b052c252f1d2763ec5175dc1e7c55.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:100%;
+            height:100%;
+        }
+        #navbar{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        :root{
+            --navbar-height:60px;
+        }
+        #logo{
+            width: 7%;
+            height: 20%;
+            margin: 34px 45px 8px 45px;
+            padding:20px 20px 20px 20px;
+            align-self: center;
+        }
+        
+        .heading{
+            width:50%;
+            margin:34px 45px 34px 45px;
+            padding:20px 20px 20px 2opx;
+            text-align: center;
+            
+        }
+        #login{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            
+        }
+        .studentlogin{
+            
+            margin:2% 11% 2% 32%;
+            padding:15px 30px 15px 30px;
+            font-size:100%;
+            border-radius: 10px;
+            border:none;
+            width:20%;
+            width:15%;
+        }
+        .teacherpanel{
+            margin:2% 2% 2% -3%;
+            padding:34px 45px 34px 45px;
+            font-size:100%;
+            border-radius: 10px;
+            border:none;
+            
+        }
+        .button1:hover{
+            cursor: pointer;
+            background-color: darkblue;
+            color: black;
+        }
+        .button2:hover{
+            cursor: pointer;
+            background-color: darkblue;
+            color: black;
+
+        }
+        .signup{
+            cursor: pointer;
+            font-size: 80%;
+            margin:1% 1% 2% 44%;
+            padding:1% 4% 1% 4%;
+            border-radius: 10px;
+            border:none;
+        }
+        .image1{
+            width:30%;
+            height:20%;
+        }
+        
+    </style>
+    <body>
+
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+        <nav id="navbar">
+            <img src="https://cdn3.vectorstock.com/i/1000x1000/66/42/education-logo-2-vector-25496642.jpg" alt="no internet" id="logo">
+           
+           <div class="heading">
+              <h1>Welcome to Sardar vallahbhai National Institute of Technology nOnline portal</h1>
+           </div>
+        </nav>
+        <section class="navbar2">
+            <div id="login">
+                <button type="button" onclick="window.location.href='/studentPortal'" class="studentlogin button1" style="background-color: rgb(211, 242, 251);">
+                    <img src="http://khitguntur.ac.in/grievancemaster/images/student.png" class="image1"><br>
+                    Student Login
+                     
+                </button>
+                <button type="button" onclick="window.location.href='/collegePortal' " class="teacherpanel button2" style="background-color: rgb(211, 242, 251);">
+                    
+                        Teacher Panel
+                    
+                </button>
+            </div>
+            <div >
+                <button type="button" onclick="window.location.href='/signup'" class="signup" style="background-color: rgb(211, 242, 251);">
+                    Signup
+                </button>
+            </div>
+        </section>
+    </body>
+</html>

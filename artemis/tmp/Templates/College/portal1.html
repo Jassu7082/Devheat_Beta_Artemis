@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>
+Teacher Page
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.button{background-color:black;
+              padding:2%;
+             }
+
+   .button img{
+        height:5%;
+        width:5%;
+      }
+   img{
+          height:120px;
+        width:110px;
+          }
+.head{
+        color:white;
+        font-size:100%;
+        font-style:italic;  
+       }
+.o{
+     font-size:20px;
+     text-decoration:none;
+     color:white;
+     background-color:black;
+     padding:4px;
+     }
+   a:hover{ 
+          color:black;
+          border-color:black;
+          border-width:3px;
+          border-style:solid;
+          background-color:white; 
+           }
+.body{background-image:url("back.png");
+          font-family: 'Jost', sans-serif;
+         z-index:-1;
+         background-repeat:repeat-y;
+         background-size:100%;
+         }
+ .exam{
+           font-size:150%;
+           border-color:tomato;
+           border-width:3px;
+           border-style:solid;
+           border-radius:6%;
+           background-color:tomato;
+           width:40%;
+           height:55%;  
+           float:left;  
+           margin-top:4%;
+           margin-left:4%;
+           padding:2%;    
+          }
+           
+  .s{float:right;
+          }
+
+  .create{
+              color:white;
+              background-color:#072f5f;
+              font-size:20px;
+              border-radius:4px;
+              border-style:solid;
+              padding:2%;
+              margin-left:70%;
+              }
+ .exambutton{
+             padding-left:2%;
+             padding-right:2%;
+            }
+   button:hover{
+              color:black; 
+              border-color:white;    
+              }
+</style>
+</head>
+<body class="body">
+<center class="head"><h1>S.V.N.I.T</h1></center>
+<div class="button w3-container w3-black">
+<img src="https://cdn3.vectorstock.com/i/1000x1000/66/42/education-logo-2-vector-25496642.jpg">
+&nbsp<a class="o exambutton" href="">Exam</a>&nbsp<a class="o" href="">Submitted </a>&nbsp<a class="o" href="">Result</a>
+&nbsp<div class="s"><a class="o"  href="">Logout</a></div>
+</div>
+{% block content %}
+<div class="exam ">
+
+<form method="post" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+<h1>Scheduled exam</h1>
+Exam Name: {{form.examName}}
+<img align="left" src="https://cdn5.vectorstock.com/i/1000x1000/51/09/calendar-icon-vector-22895109.jpgs"><br>
+Date (dd-mm-yyyy){{form.date}}<br>&nbsp<br>
+Upload Paper {{form.pdf}}
+<button type="submit">Upload Exam</button>
+
+{% endblock %}
+</div>
+</form>
+</body>
+</html>

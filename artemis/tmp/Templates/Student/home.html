@@ -1,0 +1,283 @@
+<html>
+    <head>
+        <title>Student Portal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+      /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: rgb(18, 89, 134);
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+  
+}
+#navbar2{
+    justify-content: center;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.image1{
+    
+            width:10%;
+            height:10%;
+          
+}
+.iconbar1{
+    width:30%;
+    height:30%;
+    background-color: rgb(239, 176, 176);
+   /* background-image: url("https://www.xmple.com/wallpaper/gradient-pink-linear-brown-1920x1080-c2-ffebcd-ff69b4-a-300-f-14.svg");*/
+    border:black;
+    margin:2% 2% 2% 2%;
+    padding:19px 0px 4px 25px;
+    border:4px;
+    border-radius:20px;
+    border:none;
+    float:left;
+    
+}
+.calendar{
+    
+    height:30%;
+}
+.content1{
+    color:aliceblue;
+    font-size:24px;
+    background-color:rgb(246, 157, 157) ;
+    width:50%;
+}
+.content2{
+    font-size:20px;
+    color:aliceblue;
+    
+}
+.button1{
+    width:30%;
+    text-align: center;;
+    margin:14px 2px 2px 100px;
+    padding:15px 20px 15px 20px;
+    color:rgb(246, 157, 157);
+    border-radius: 20px;
+    font-size:15px;
+    border:none;
+    background-color:white ;
+}
+.button{
+    height:40%;
+    
+}
+#button2:hover{
+    background-color:rgb(243, 214, 231);
+    cursor:pointer;
+}
+.iconbar2{
+    width:30%;
+    height:30%;
+    background-color: rgb(138, 119, 184);
+   /* background-image: url("https://www.xmple.com/wallpaper/gradient-pink-linear-brown-1920x1080-c2-ffebcd-ff69b4-a-300-f-14.svg");*/
+    border:black;
+    margin:2% 2% 2% 2%;
+    padding:19px 0px 4px 25px;
+    border:4px;
+    border-radius:20px;
+    border:none;
+    float:right;
+    
+}
+.results{
+    
+    height:30%;
+}
+.content3{
+    color:aliceblue;
+    font-size:24px;
+    background-color:rgb(155, 131, 210) ;
+    width:50%;
+}
+.content4{
+    font-size:20px;
+    color:aliceblue;
+    
+}
+.button4{
+    width:30%;
+    text-align: center;;
+    margin:14px 2px 2px 100px;
+    padding:15px 20px 15px 20px;
+    color:rgb(138, 119, 184);
+    border-radius: 20px;
+    font-size:15px;
+    border:none;
+    background-color:white ;
+}
+.button3{
+    height:40%;
+    
+}
+#button5:hover{
+    background-color:rgb(213, 191, 205);
+    cursor:pointer;
+}
+.iconbar3{
+    width:30%;
+    height:30%;
+    background-color:rgb(201, 119, 157);
+   /* background-image: url("https://www.xmple.com/wallpaper/gradient-pink-linear-brown-1920x1080-c2-ffebcd-ff69b4-a-300-f-14.svg");*/
+    border:black;
+    margin:2% 2% 2% 2%;
+    padding:19px 0px 4px 25px;
+    border:4px;
+    border-radius:20px;
+    border:none;
+    float:left;
+    
+}
+.corrections{
+    
+    height:30%;
+}
+.content5{
+    color:aliceblue;
+    font-size:24px;
+    background-color:rgb(193, 109, 147) ;
+    width:50%;
+}
+.content6{
+    font-size:20px;
+    color:aliceblue;
+    
+}
+.button7{
+    width:30%;
+    text-align: center;;
+    margin:14px 2px 2px 100px;
+    padding:15px 20px 15px 20px;
+    color:rgb(201, 119, 157);
+    border-radius: 20px;
+    font-size:15px;
+    border:none;
+    background-color:white ;
+}
+.button6{
+    height:40%;
+    
+}
+#button8:hover{
+    background-color:rgb(213, 191, 205);
+    cursor:pointer;
+}
+.iconbar{
+    float:left;
+    padding-left:50px;
+}
+.home{background-color:white;
+      border-radius:20px;}
+ </style>
+    <body>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="https://cdn3.vectorstock.com/i/1000x1000/66/42/education-logo-2-vector-25496642.jpg" alt="MyOnlineMeal.com">
+            </div>
+            <ul id="navbar2">
+                <li class="item home"><a style="color:black" href="#home">Home</a></li>
+                <li class="item"><a href="#contact">Classes</a></li>
+                <li class="item"><a href="#services-container">Tests</a></li>
+                <li class="item"><a href="#client-section">Performance</a></li>
+                <li class="item"><a href="#contact">Achievements</a></li>
+                
+            </ul>
+            </nav>
+        <section id="navbar2">    
+            <div class="iconbar1 iconbar">
+                <p class="content1"><b>Scheduled Tests</b></p><br>
+                <p class="content2"><img src="https://cdn5.vectorstock.com/i/1000x1000/51/09/calendar-icon-vector-22895109.jpgs" class="calendar" align="middle">
+                    End Semester Exam July 25 9.00 to 12.00</p>
+                    <div class="button">
+                        <button type="button"  onclick="window.location.href='test.html'" class="button1" id="button2">Start Test</button>
+                    </div>
+            </div>
+            <div class="iconbar2 iconbar">
+                <p class="content3"><b>Results</b></p><br>
+                <p class="content4"><img src="https://e7.pngegg.com/pngimages/343/492/png-clipart-result-training-goal-business-process-best-practice-saving-angle.png" class="results" align="middle">
+                    End Semester Results</p>
+                    <div class="button3">
+                        <button type="button"  onclick="window.location.href='test.html'" class="button4" id="button5">View Results</button>
+                    </div>
+            </div>
+            <div class="iconbar3 iconbar">
+                <p class="content5"><b>Achievements</b></p><br>
+                <p class="content6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKu_zHucWzfRgvu-NzJlWPvq4NaKOaz95i446XZBz2Dqrbxms-VtlANJ-MFXeYaM6o-g&usqp=CAU"class="corrections" align="middle">
+                    Achievements</p>
+                    <div class="button6">
+                        <button type="button"  onclick="window.location.href='test.html'" class="button7" id="button8">Click Here</button>
+                    </div>
+            </div>
+        </section>
+
+            
+            
+    </body>
+    
+</html>
