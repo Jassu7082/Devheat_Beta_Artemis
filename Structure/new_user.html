@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>
+New User
+</title>
+<style>
+a:hover{ 
+          color:red;
+           }
+img{
+        height:140px;
+        width:110px;
+      }
+
+ .one{color:black;
+        font-size:700%;
+        font-style:italic;
+        text-align:left;
+        padding:10px;        
+       }
+.o{
+     font-size:30px;
+     text-decoration:none;
+     color:white;
+     background-color:black;
+     padding:5px;
+     padding-top:22%;
+     padding-right:20.9%;
+     
+     }
+  .button{padding-top:0%;
+          float:right;
+          margin-right:1%;
+         }
+  .button:hover{border-color:black;
+                          border-style:solid;
+                          border-width:6px;}
+  .two{
+       margin-top:5%;
+       margin-left:45%;
+        width:20%;
+        }
+     .i{margin-left:20%;}
+   .body{font-family: 'Jost', sans-serif;
+            background-color:#3397ff;
+            background-image:url("user_background.gif");
+            background-repeat:no-repeat;
+            background-size:100%;
+            }
+</style>
+</head>
+<body class="body">
+<div class="one"><center><img src="https://cdn3.vectorstock.com/i/1000x1000/66/42/education-logo-2-vector-25496642.jpg"> S.V.N.I.T</center>
+</div>
+<div class="button"><a class="o" onclick="window.location.href='home.html'">Back</a><br> </div>
+<div class="two" >
+<form action="" method="post">
+<fieldset >
+<legend><h1>Fill the details</h1></legend>
+<img class="i" id="image" src="F:\html\extra for html\edit.png">
+<br>&nbsp<br>
+<input type="text" placeholder="user id"><br>&nbsp<br>
+Date of birth<br>&nbsp<br><input type="date"><br>&nbsp<br>
+<input type="text" placeholder="name"><br>&nbsp<br>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" onclick="document.getElementById('image').src='edit.png'" name="flexRadioDisabled" id="flexRadioDisabled" checked>
+  <label class="form-check-label" for="flexRadioDisabled">
+    Student
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" onclick="document.getElementById('image').src='edit2.png'" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" >
+  <label class="form-check-label" for="flexRadioCheckedDisabled">
+ 	College
+  </label>
+</div>
+
+<input class="input" type="password" placeholder="new password">
+<br>&nbsp<br>	
+<input class="input" type="password" placeholder="conform password">
+<br>&nbsp<br>
+
+<input type="submit" name="Submit">
+<br>
+</fieldset>
+</form>
+</div>
+</body>
+</html>

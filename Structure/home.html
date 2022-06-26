@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Online Exam Website</title>
+    </head>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        .body{
+            background-image: url("https://i.pinimg.com/736x/41/7b/05/417b052c252f1d2763ec5175dc1e7c55.jpg");
+            background-position: center;
+            background-repeat:repeat-y;
+            background-size:100%;
+        }
+            
+        
+        #navbar{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        :root{
+            --navbar-height:60px;
+        }
+        #logo{
+            width: 7%;
+            height: 20%;
+            margin: 34px 45px 8px 45px;
+            padding:20px 20px 20px 20px;
+            align-self: center;
+        }
+        
+        .heading{
+            width:50%;
+            margin:34px 45px 34px 45px;
+            padding:20px 20px 20px 2opx;
+            text-align: center;
+            
+        }
+        #login{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            
+        }
+        .studentlogin{
+            
+            margin:2% 11% 2% 32%;
+            padding:15px 30px 15px 30px;
+            font-size:100%;
+            border-radius: 10px;
+            border:none;
+            width:20%;
+            width:15%;
+
+            
+        
+           
+
+        }
+        .teacherpanel{
+            margin:2% 2% 2% -3%;
+            padding:14px 30px 14px 30px;
+            font-size:100%;
+            border-radius: 10px;
+            border:none;
+            width:15%;
+            
+        }
+        
+        .button1:hover{
+            
+            cursor: pointer;
+            background-color: #77afda;
+            color: black;
+
+        }
+        .button2:hover{
+           
+            cursor: pointer;
+            background-color: #91c7f0;
+            color: black;
+
+        }
+        .button3{
+            cursor: pointer;
+            background-color: #91c7f0;
+            color:black;
+        }
+        .signup{
+            
+            font-size: 80%;
+            margin:1% 1% 2% 44%;
+            padding:1px 1px 1px 1px;
+            border-radius: 10px;
+            border:none;
+            width:15%;
+        }
+        .image1{
+            width:30%;
+            height:20%;
+            
+        }
+        .image2{
+            width:30%;
+            height:20%
+        }
+        .image3{
+            width:20%;
+            height:20%;
+        }
+        
+    </style>
+    <body class="body">
+        <nav id="navbar">
+            <img src="https://cdn3.vectorstock.com/i/1000x1000/66/42/education-logo-2-vector-25496642.jpg" alt="no internet" id="logo">
+           
+           <div class="heading">
+              <h1>Welcome to Sardar vallahbhai National Institute of Technology nOnline portal</h1>
+           </div>
+        </nav>
+        <section class="navbar2">
+            <div id="login">
+                <button type="button" onclick="window.location.href='studentlogin.html'" class="studentlogin button1" style="background-color: white">
+                    <img src="http://khitguntur.ac.in/grievancemaster/images/student.png" class="image1"><br>
+                    Student Login
+                     
+                </button>
+                <button type="button" onclick="window.location.href='teacherlogin.html'" class="teacherpanel button2" style="background-color:white">
+                      <img src="https://w7.pngwing.com/pngs/511/170/png-transparent-class-course-computer-icons-teacher-student-tutoring-class-text-class-logo.png" class="image2">
+                        <br>
+                        Teacher Panel
+                    
+                </button>
+            </div>
+            <div >
+                <button type="button" onclick="window.location.href='new_user.html'" class="signup button3" style="background-color: white">
+                    <img src="https://static.thenounproject.com/png/736543-200.png" class="image3">
+                    <br>
+                    Signup
+                </button>
+
+            </div>
+        </section>
+    </body>
+</html>
