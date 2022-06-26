@@ -22,3 +22,10 @@ class ExamQp(models.Model):
     def __str__(self):
         return self.examName
 
+class result(models.Model):
+    examName = models.CharField(max_length=100)
+    pdf = models.FileField(upload_to='exam/pdf/')
+
+    def __str__(self):
+        return self.examName
+

@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from college.models import college
 from django.contrib import messages
-from .forms import ExamForm
+from .forms import ExamForm, ResultForm
 from .models import ExamQp
+from student.models import ExamUpl
 
 # Create your views here.
 def home(request):
@@ -50,5 +51,23 @@ def createxam(request):
 
 
 def correction(request):
-    print("correction")
-    
+    print("showing uploaded")
+    exams = ExamUpl.objects.all()
+    return render(request,'College/correction.html',{'exams' : exams} )
+
+def result(request):
+    print("Showing results")
+    if request.method == 'POST':
+        print("post result")
+        form3 = ResultForm(request.POST, request.FILES)
+        print(request.POST)
+        print(request.FILES)
+        if form3.is_valid:
+            form3.save()
+            print("saved form")
+            exams = ExamQp.objects.all()
+            return render(request,'College/portal.html',{'exams':exams} )
+    else:
+        print("form created")
+        form = ResultForm()
+        return render(request,'College/results.html',{'form' : form} )

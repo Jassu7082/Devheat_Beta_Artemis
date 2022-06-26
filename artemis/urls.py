@@ -17,6 +17,8 @@ from django import urls
 from django.contrib import admin
 from django.urls import path,include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('signup',views.signup,name="signup"),
     path('studentPortal/',include('student.urls')),
     path('collegePortal/',include('college.urls'))
-]
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

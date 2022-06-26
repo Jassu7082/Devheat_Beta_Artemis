@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title>Student Portal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+      /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+     background-image: url("https://c.neh.tw/thumb/f/720/comrawpixel2339918.jpg");
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:100%;
+    background-repeat: no-repeat;
+    height:100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: rgb(18, 89, 134);
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+  
+}
+#navbar2{
+    justify-content: center;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.image1{
+    
+            width:10%;
+            height:10%;
+          
+}
+.iconbar1{
+    width:30%;
+    height:30%;
+    background-color: rgb(239, 176, 176);
+   /* background-image: url("https://www.xmple.com/wallpaper/gradient-pink-linear-brown-1920x1080-c2-ffebcd-ff69b4-a-300-f-14.svg");*/
+    border:black;
+    margin:2% 2% 2% 2%;
+    padding:19px 0px 4px 25px;
+    border:4px;
+    border-radius:20px;
+    border:none;
+    float:left;
+    
+}
+.calendar{
+    
+    height:30%;
+}
+.content1{
+    color:aliceblue;
+    font-size:24px;
+    background-color:rgb(246, 157, 157) ;
+    width:50%;
+}
+.content2{
+    font-size:20px;
+    color:aliceblue;
+    
+}
+.button1{
+    width:30%;
+    text-align: center;;
+    margin:14px 2px 2px 100px;
+    padding:15px 20px 15px 20px;
+    color:rgb(246, 157, 157);
+    border-radius: 20px;
+    font-size:15px;
+    border:none;
+    background-color:white ;
+}
+.button{
+    height:40%;
+    
+}
+#button2:hover{
+    background-color:rgb(243, 214, 231);
+    cursor:pointer;
+}
+.results{
+    
+    height:30%;
+}
+.corrections{   
+    height:30%;
+    }
+.iconbar{
+    float:left;
+    padding-left:50px;
+}
+.logout{
+    margin:2px 2px 2px 500px;
+    width:30%;
+    height:30%;
+}
+.logout1{
+    width:100px;
+    height:40px;
+    border-radius: 20px;
+    border:none;
+    color:black;
+    background-color: white;
+    font-size:13px;
+    cursor:pointer;
+}
+.home{background-color:white;
+            border-radius:20px;}
+.submit{ padding:2%;
+               margin-top:5%;
+               margin-left:60%;
+              background-color:white;
+              border-color:rgb(239, 176, 176)}
+.submit:hover{padding:3%;
+           border-color:black;
+           border-radius:30px;}
+ </style>
+    <body>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="https://cdn3.vectorstock.com/i/1000x1000/66/42/education-logo-2-vector-25496642.jpg" alt="MyOnlineMeal.com">
+            </div>
+            <ul id="navbar2">
+                <li class="item "><a  href="#home">Home</a></li>
+                <li class="item"><a href="#contact">Classes</a></li>
+                <li class="item home "><a style="color:black"  href="#services-container">exam</a></li>            
+                <li class="item"><a href="#client-section">Performance</a></li>
+                <li class="item"><a href="#contact">Achievements</a></li>                
+            </ul>
+            <div class="logout">
+                <button type="button" onclick="window.location.href='logout.html'" class="logout1"><b>Logout</b></button>
+                </div>
+            </nav>
+        <section id="navbar2">    
+            <div class="iconbar1 iconbar">
+                <table class="table table-striped">
+                    <thead>
+                            <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Exam Name</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">File</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                            {% for exam in exams %}
+                            <tr>
+                                    <th scope="row">1</th>
+                                    <td>{{exam.examName}}</td>
+                                    <td>{{exam.date}}</td>
+                                    <td><a href="{{ exam.pdf.url }}" target="_blank">click</a></td>
+                            </tr>
+                            {% endfor %}
+                    </tbody>
+            </table>
+            {% block content %}
+            <form method="post" enctype="multipart/form-data" action="">
+                {% csrf_token %}
+            <input type="text" placeholder="exam-code" />
+            {{form.pdf}}
+            <input type="submit" />
+            </form>
+            {% endblock content %}
+            </div>
+        </section>      
+    </body>
+</html>

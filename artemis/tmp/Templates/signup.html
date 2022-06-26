@@ -58,7 +58,9 @@ img{
 {% csrf_token %}
 <fieldset >
 <legend><h1>Fill the details</h1></legend>
-<img class="i" id="image" src="edit.png">
+{% block content %}
+<img class="i" id="image" src="{{ variable }}">
+{% endblock %}
 <br>&nbsp<br>
 <input type="text" placeholder="user id" name="username"><br>&nbsp<br>
 Date of birth<br>&nbsp<br><input type="date" name="dob"><br>&nbsp<br>
@@ -72,7 +74,7 @@ Date of birth<br>&nbsp<br><input type="date" name="dob"><br>&nbsp<br>
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" onclick="document.getElementById('image').src='edit2.png'" type="radio" name="flexRadioDefault" id="flexRadioCheckedDisabled"  value="College">
+  <input class="form-check-input" onclick="document.getElementById('image').src='edit2.jpg'" type="radio" name="flexRadioDefault" id="flexRadioCheckedDisabled"  value="College">
   <label class="form-check-label" for="flexRadioCheckedDisabled">
  	College
   </label>

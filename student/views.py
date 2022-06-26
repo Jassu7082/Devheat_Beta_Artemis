@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
+from college.forms import ResultForm
 from college.models import students
 from django.contrib import messages
 from college.models import ExamQp
+from college.models import result as ResultP
 from .forms import ExamForm2
-
 
 # Create your views here.
 def home(request):
@@ -36,13 +37,12 @@ def test(request):
     print("testPage ")
     if request.method == 'POST':
         print("post create exam")
-        form = ExamForm2(request.POST, request.FILES)
-        print(form)
+        form2 = ExamForm2(request.POST, request.FILES)
         print(request.POST)
         print(request.FILES)
-        if form.is_valid():
+        if form2.is_valid():
             print("ho")
-            form.save()
+            form2.save()
             exams = ExamQp.objects.all()
             return render(request,'Student/home.html',{'exams':exams} )
         else:
@@ -54,3 +54,8 @@ def test(request):
         exams = ExamQp.objects.all()
         form = ExamForm2()
         return render(request,'Student/test.html',{'exams':exams, 'form':form})
+
+def result(request):
+    print("viewing result ")
+    results = ResultP.objects.all()
+    return render(request,'Student/result.html',{'result':results})
