@@ -36,11 +36,21 @@ Feature in student page are:
             3.They can see results
 As it is a subjective exam students need to write accordingly and scan it and make relevant pdf. The submitted pdf will be displayed to the teacher. Students can view the pdfs of  exam paper,and the results that are uploaded by the teacher.  
 
-<img src="source/img5.png">
+
 
 ## Teacher page:
 
-Teachers can schedule exam and upload question paper through this portal.Teachers  can get student responses.
-Teachers  can upload result pdf .
+Teacher page:
+
+Teachers can schedule exams and upload question papers through the teacher portal and students can access question papers through the student portal.
+Features of this  portal are:
+  1.Teachers  can get student responses.
+  2.Teachers  can upload the result pdf.
+  3.Teachers  can upload the exam question paper pdf
+
+<img src="source/img5.png">
+Backend:
+The server is hosted in a virtual environment  which is run on django.
+
 
 https://docs.google.com/document/d/13-lUpu6G29rSOM4oRIBd7j86A0b3elZL1gOokL_S20U/edit?usp=sharing
