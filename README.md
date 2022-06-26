@@ -31,9 +31,10 @@ After student login there page look like below:
 ## Student page:
 <img src="source/img4.png">
 Feature in student page are:
-            1.They can view exam paper pdf
-            2.They can submit their subjective answers in pdf
-            3.They can see results
+            1.can view exam paper pdf
+            2.can submit their subjective answers in pdf
+            3.can see results
+            4.can see their performance overtime
 As it is a subjective exam students need to write accordingly and scan it and make relevant pdf. The submitted pdf will be displayed to the teacher. Students can view the pdfs of  exam paper,and the results that are uploaded by the teacher.  
 
 
