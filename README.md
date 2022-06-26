@@ -64,5 +64,4 @@ Features of this  portal are:
 Backend:
 The server is hosted in a virtual environment  which is run on django.
 
-
-https://docs.google.com/document/d/13-lUpu6G29rSOM4oRIBd7j86A0b3elZL1gOokL_S20U/edit?usp=sharing
+[DRIVE LInk](https://drive.google.com/file/d/1VBxvWu6BUsWDA8iKx1Rkcdt7VeSfjrHm/view?usp=sharing)
