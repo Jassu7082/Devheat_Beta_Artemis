@@ -28,7 +28,7 @@ The login pages are shown below:
 
 From  new users we collect  information which is useful for teachers to identify  them.The login pages give registered users access to their respective page.
 After student login there page look like below:
-
+## Student page:
 <img src="source/img4.png">
 Feature in student page are:
             1.They can view exam paper pdf
